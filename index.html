@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centin Studios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="https://kit.fontawesome.com/c2477ed39d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+        <a href="#home" id="logo"> <img src="img/logo.svg" alt="logo"> </a>
+        <ul class="nav-menu">
+            <li class="nav-item"> <a class="nav-link" href="#about"> About </a></li>
+            <li class="nav-item"> <a class="nav-link" href="#models_3d"> 3D Models </a></li>
+            <li class="nav-item"> <a class="nav-link" href="#vfx"> VFX </a></li>
+            <li class="nav-item"> <a class="nav-link" id="fake_button" href="#contact"> Contact </a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    
+    <!-- HOME --> 
+
+    <header id="home">
+        <div class="background-image">
+            <section>
+                <div class="flex-container home">
+                    <h1> Vincent Schwaar </h1>
+                    <h2> 3D &amp; VFX-Artist </h2>
+                </div>
+            </section>
+        </div>
+    </header>
+    
+    <!-- ABOUT --> 
+    
+    <section id="about">
+        <div class="flex-container">
+            <h3>About Me</h3>
+            <div class="flexbox-item-about">
+                <h4>So, who am I? </h4>
+                <p>VFX ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </div>    
+        </div>
+    </section>
+    
+    <!-- CONTENT -->
+    <!-- 3D Models -->
+
+    <!-- Use Local Host for 3D Model and go live! -->
+
+    <section id="models_3d">
+        <div class="flex-container"> 
+            <h3> 3D Models </h3>
+                <div class="carousel" data-carousel>
+                    <button class="carousel-button prev" data-carousel-button="prev">&#8249;</button>
+                    <button class="carousel-button next" data-carousel-button="next">&#8250;</button>
+                    <div class="tooltip"> 
+                        <div class="info-icon"> &#8505; 
+                            <div class="tooltip-text"> 
+                                <h5>Steuerungselemente</h5>
+                                <p>   
+                                    Nutze Rechtsklick um dich frei zu bewegen. Mit dem Mausrad kannst du zoomen und mit Linksklick das Objekt drehen.
+                                </p>  
+                            </div> 
+                        </div>
+                    </div>
+                    <ul data-slides>
+                        <li class="slide" data-active> 
+                            <model-viewer loading="eager" shadow-intensity="1" src="obj/f1 car/F12022.gltf" alt="F1 2022 McLaren Car" camera-target="0m 0.25m 0m" 
+                            camera-orbit="120deg 75deg 8m" field-of-view="40deg" camera-controls poster="poster.webp" style="margin-top: 15px;"
+                            ></model-viewer>
+                            <a href="#Model1"><h4> F1 2022 McLaren Car</h4></a> 
+                        </li>
+                        <li class="slide" >
+                            <model-viewer loading="eager" shadow-intensity="1" src="obj/chair/chair.gltf" alt="dark wood chair" camera-target="-0.25m .375m 0m" 
+                            camera-orbit="0deg 80deg 6m" field-of-view="30deg"  camera-controls poster="poster.webp" style="margin-top: 15px;"
+                            ></model-viewer>
+                            <a href="#Model2"><h4>Designer chair</h4></a>
+                        </li>
+                        <li class="slide" >
+                            <model-viewer loading="eager" shadow-intensity="1" src="obj/tree/tree.gltf" alt="Tasse Tee" camera-target="0m 1m 0m" 
+                            camera-orbit="120deg 75deg" field-of-view="15deg"  camera-controls poster="poster.webp" style="margin-top: 15px;"
+                            ></model-viewer> 
+                            <a href="#Model3"><h4>Low poly tree</h4></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="according">
+                    <details class="contentBx"> 
+                        <summary class="label"> <a href="#readmore_3d"> hier weiterlesen</a>  </summary>
+                        <div class="content">
+                            <div id="readmore_3d">
+                                <p> ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                            </div>
+                            <div class="flexbox-item-1">
+                                <img src="https://via.placeholder.com/420x255" alt="Model1">
+                                <h4 id="Model1" > F1 2022 McLaren Car </h4>
+                                <p>ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                            </div>
+                            <div class="flexbox-item-2">
+                                <img src="https://via.placeholder.com/420x255" alt="Model1">
+                                <h4 id="Model2"> Designer chair </h4>
+                                <p>ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                            </div>
+                            <div class="flexbox-item-1">
+                                <img src="https://via.placeholder.com/420x255" alt="Model1">
+                                <h4 id="Model3"> Low poly tree </h4>
+                                <p>ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+        </div>
+    </section>
+
+    <!-- VFX -->
+
+    <section id="vfx">
+        <div class="flex-container"> 
+            <h3> Visual Effects </h3>
+                <div class="carousel" data-carousel>
+                    <button class="carousel-button prev" data-carousel-button="prev">&#8249;</button>
+                    <button class="carousel-button next" data-carousel-button="next">&#8250;</button>
+                    <ul data-slides>
+                        <li class="slide" data-active >
+                            <a href="https://youtu.be/oNrjxbyNEn4" target="_blank"> <img src="img/content/aftereffects/STAY_Thumbnail.png" alt="STAY - Black Ops Cold War Montage - Thumbnail"> </a>
+                            <a href="#STAY"> <h4>STAY - Black Ops Cold War Montage</h4> </a>
+                        </li>
+                        <li class="slide" >
+                            <a href="https://youtu.be/5LQjyWqbHYA" target="_blank"> <img src="img/content/aftereffects/Throwback_Thumbnail.png" alt="Throwback - Black Ops Edit - Thumbnail"> </a>
+                            <a href="#Throwback"> <h4>Throwback - Black Ops Edit</h4> </a>
+                        </li>
+                        <li class="slide" > 
+                            <a href="https://youtu.be/R_hLdAEAwbs" target="_blank"> <img src="img/content/aftereffects/Shakira!_Thumbnail.png" alt="Shakira! - Fortnite Montage - Thumbnail"> </a>
+                            <a href="#Shakira!"> <h4>Shakira! - Fortnite Montage</h4> </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="according">
+                    <details class="contentBx"> 
+                        <summary class="label"> <a href="#readmore_vfx"> hier weiterlesen </a>  </summary>
+                        <div class="content">
+                            <div id="readmore_vfx">
+                                <p> ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                            </div>
+                            <div class="flexbox-item-1">
+                                <img src="https://via.placeholder.com/420x255" alt="Model1">
+                                <h4 id="STAY">STAY - Black Ops Cold War Montage</h4>
+                                <p>ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                            </div>
+                            <div  class="flexbox-item-2">
+                                <img src="https://via.placeholder.com/420x255" alt="Model1">
+                                <h4 id="Throwback">Throwback - Black Ops Edit</h4>
+                                <p>ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                            </div>
+                            <div  class="flexbox-item-1">
+                                <img src="https://via.placeholder.com/420x255" alt="Model1">
+                                <h4 id="Shakira!" >Shakira! - Fortnite Montage</h4>
+                                <p>ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+        </div>
+    </section>
+    
+    <!-- CONTACT -->
+
+    <section id="contact">
+        <div class="flex-container">
+            <h3>Contact</h3>
+                <form action="https://forsubmit.co/centinbusinessmail@gmail.com" method="POST">
+                    <div id="feed">
+                        <input class="input-text" type="text" tabindex="1" placeholder="Vorname">
+                        <input class="input-text" type="text" tabindex="2" placeholder="Nachname">
+                    </div>
+                    <div id="mail">
+                        <input class="input-text" type="email" tabindex="3" placeholder="E-Mail">
+                        <input class="input-text" type="text" tabindex="4" placeholder="Betreff">
+                    </div>
+                    <textarea class="input-text" tabindex="3" placeholder="Nachricht"></textarea>
+                    <div id="submit"> 
+                        <input class="button" type="submit"> 
+                    </div>
+                </form>
+        </div>
+    </section>
+   
+    <!-- IMPRINT, PRIVACY POLICY -->
+
+    <footer>
+        <div class="flex-container">
+            <div class="flexbox-item-footer">
+                <ul>
+                    <li> <a href="#contact"> Kontakt </a>  </li>
+                    <li> <a href="subpages/imprint.html"> Impressum </a> </li>
+                    <li> <a href="subpages/privacypolicy.html"> Datenschutzerklärung </a></li>
+                </ul>
+                <ul>
+                    <li> <a href="https://www.instagram.com/scoped_centin/" target="_blank"> <i class="fa-brands fa-instagram"></i> Instagram </a> </li>
+                    <li> <a href="https://www.youtube.com/@scopedcentin" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>  </li>
+                    <li> <a href="https://github.com/C3ntin" target="_blank" ><i class="fa-brands fa-github"></i> GitHub </a>  </li>
+                </ul>
+            </div>
+                <p> &copy; 2023 Centin Studios </p>
+        </div>
+    </footer>
+    
+</body>
+
+</html>
