@@ -1,0 +1,46 @@
+/* --- general --- general --- general --- general --- general --- general --- general --- general --- general --- general --- general --- general --- general --- general --- */
+
+*{                                                    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;                              
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(230, 230, 230); 
+    font-size: 1.25rem;
+}
+
+body {
+    background-color: rgb(16, 16, 16);
+    padding: 5% 10%;
+}
+
+a { color: rgb(0, 136, 169);}
+
+li {
+    margin: 2rem 5%;
+}
+
+
+/* --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- */
+
+h1{ font-size: 4rem; }
+h2 { font-size: 2.75rem; }
+h3 { font-size: 2rem;}
+h4 { font-size: 1.5rem ;}
+
+h1, h2, h3, h4 {
+    font-family: 'Raleway', sans-serif; ;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 2rem 0; 
+}
+
+h4 {
+    text-transform: none;
+    font-weight: 700;
+    padding: 0;
+}
+
+p { text-align: justify; width: 100ch; }
+

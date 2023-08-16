@@ -1,0 +1,775 @@
+/* --- general --- general --- general --- general --- general --- general --- general --- general --- general --- general --- general --- general --- general --- general --- */
+
+*{                                                      /* general settings */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    scroll-behavior: smooth;                            /* smooth scrolling when click */
+    scroll-padding-top: var(--scroll-padding,50px);     /* distance between first object on click to section */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(16, 16, 16);
+    color: rgb(230, 230, 230); 
+}
+
+::-webkit-scrollbar{                                    /* remove visible scrollbar */
+    display: none;
+}
+
+section {                                               
+    min-height: 100vh;                                  /* display section fullscreen height */
+}
+
+footer {                                                
+    background-color: rgb(26, 26, 26);
+    min-height: 20vh;
+}
+
+.flex-container {                                       /* container with general flexbox settings */
+    flex-direction: column;                             /* arrange items vertically */
+    align-items: center;                                /* center items */
+    margin: 0% 10%;                                     /* sets outside border to 10% left and right  */
+}
+
+
+
+/* --- fonts --- fonts --- fonts --- fonts --- fonts --- fonts --- fonts --- fonts --- fonts --- fonts --- fonts --- fonts --- fonts --- fonts --- fonts --- fonts --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap');
+
+/* --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- */
+
+h1{ font-size: 7rem; }
+h2 { font-size: 5rem; }
+h3 { font-size: 3.5rem; padding: 2rem 0; margin-bottom: 1rem; color: orange; }
+h4 { font-size: 2rem; color: orange;}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Raleway', sans-serif; ;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+p { font-size: 1.5rem; text-align: justify; }
+
+/* --- element styling --- element styling --- element styling --- element styling --- element styling --- element styling --- element styling --- element styling --- element styling --- */
+
+li { list-style: none; }                                /* removes list-style */
+a { text-decoration: none; color: black; }            /* displays anker as normal text */
+summary { list-style: none; margin-bottom: 3rem;}
+img {border-radius: 15px;}       
+
+/* --- NAVIGATION --- NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION --- */
+
+.navbar {   	                                        /* settings for class "navbar" */
+    display: flex;                                      /* flexible position */
+    justify-content: space-between;                     /* equal space between items */
+    align-items: center;
+    padding: 0.25rem 15rem;
+    background-color: rgb(26, 26, 26);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    position: sticky;                                   /* allows content above, position is fixed at the top after scrolling down */
+    z-index: 10;                                        /* z-index works like a layer system, the higher an number, the higher the layer is positioned */
+    top: 0;
+    height: 4rem;
+}
+
+
+.nav-menu li{
+    display: inline-block;                              /* allows to set width and height to elements */
+}
+
+.nav-menu li a, .nav-menu li #fake_button {             /* settings for elements (in order) in class "navbar" */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-size: 1.25rem;
+    color:  rgb(230, 230, 230);
+    padding: 9px 25px;
+    margin: 0 1rem;
+    border-radius: 50px;                                /* rounds off the edges */
+    transition: all 0.3s ease 0s;
+}
+
+.nav-menu li a:hover {                                  /* settings  */
+    color: rgb(0, 136, 169);                          /* changes text color when hover over it */
+    background-color: rgba(0, 136, 169, 0.2);         /* changes background color when hover over it */
+}
+
+.nav-menu li #fake_button {
+    color: rgb(230, 230, 230);
+    background-color: rgba(0, 136, 169, 1);                         
+}
+
+#logo {
+    cursor: pointer;
+    margin-top: 0.25rem; 
+    width: 10%;
+}
+
+#logo img {
+    border-radius: 0px;
+}
+
+.nav-menu #fake_button:hover { background-color: rgb(146, 0, 0);}   
+#logo img:hover { opacity: 50%; }                       /* changes opacity when hover over it */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all .3s ease-in-out ;
+    background-color: rgb(230, 230, 230);
+}
+
+/* --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- */
+
+#home .background-image {
+    min-width: 100%;                                   /* sets a minimum width */
+    background-image: url("bg\ img/bg_home.jpg");
+    background-position: center;   
+    background-size: cover;                             /* adjust image without distorting it */
+}
+
+.home {
+    position: relative;                                 /* positions items relative to body */
+    color: white;
+    top: 25rem;
+    align-content: center;
+}
+
+/* --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- */
+/* --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings ---  */
+
+#about {
+    background-image: url("bg\ img/AboutBG.png");
+    background-size: cover;  
+    min-height: 1080px;
+    align-items: center;
+}
+
+.flexbox-item-about { padding: 3rem 0; }
+.flexbox-item-about h4, .flexbox-item-about p { float: left; width: 50.01%; }
+
+.flexbox-item-about h4 {
+    padding: 3rem 0 2rem 0;
+    font-size: 4rem;
+    text-transform: none;
+}
+
+/* --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- */
+/* --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- */
+
+.carousel {
+    position: relative;
+    overflow-x: auto;
+    width: 100%;
+    height: 640px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;                                         /* hides all slides */
+    border-radius: 25px;
+    transition: 400ms opacity ease-in-out;
+}
+
+.slide[data-active] { opacity: 1; z-index: 1; }         /* shows active slide */
+
+.slide model-viewer {                                   /* 3D Modell viewer */
+    inset: 0;
+    margin: 0 5%;
+    width: 90%;
+    height: 80%;
+    border-radius: 15px;
+}
+
+.slide img {
+    margin-top: 15px;
+    width: 90%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.slide img:hover {
+    transition: .5s ease-out;
+    scale: 1.025;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* --- item-anker --- item-anker --- item-anker --- item-anker --- item-anker --- item-anker --- item-anker --- item-anker --- item-anker ---  */
+
+.slide h4 {
+    position:absolute;
+    text-transform: none;
+    z-index: 3;  
+    top: 86%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(230, 230, 230);
+    width: 100%;
+}
+
+/* --- slider-button --- slider-button --- slider-button --- slider-button --- slider-button --- slider-button --- slider-button --- slider-button --- slider-button --- slider-button ---  */
+
+.carousel-button {
+    position: absolute;
+    background: none;
+    border: none;
+    z-index: 2;
+    cursor: pointer;
+    top: 35%;
+    color: rgb(0, 136, 169);
+}
+
+.carousel-button.prev{ left: 20px; font-size: 5rem; }
+.carousel-button.next{ right: 20px; font-size: 5rem; }
+
+.carousel-button:hover, .carousel-button:focus { color: rgb(196, 0, 0); }
+
+/* --- info-button --- info-button --- info-button --- info-button --- info-button --- info-button --- info-button --- info-button --- info-button --- info-button --- */
+
+.info-icon{
+    position: absolute;
+    background: none;
+    border: 1px solid;
+    z-index: 3;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: .125rem .55rem;
+    border-radius: 50%;
+    top: 0;
+    right: 20px;
+}
+
+.tooltip-text{
+    position: absolute;
+    z-index: 3;
+    border-radius: 20px;
+    right: 5rem;
+    top: 0;
+    width: 35ch;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 2px 3px rgba(230, 230, 230, 0.1);
+    color: rgb(26, 26, 26);
+}
+
+.tooltip-text h5 {
+    font-size: 1.25rem;
+    text-transform: none;
+    font-weight: 700;
+    margin-bottom: .25rem ;
+}
+
+.tooltip-text p { font-size: 0.9rem; text-align: left; }
+  
+.info-icon .tooltip-text {
+    visibility: hidden;
+    text-align: center;
+    position: absolute;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.info-icon:hover .tooltip-text { visibility: visible; opacity: 1; }
+
+/* --- according --- according --- according --- according --- according --- according --- according --- according --- according ---  */
+
+.contentBx { font-size: 1.5rem; }                           /* read more font size */
+.content { min-height: 180vh; }
+.label { cursor: pointer; }
+
+
+
+.label a {
+    color: rgb(0, 136, 169);
+    text-decoration: 3px underline dotted rgb(0, 136, 169);
+}
+
+.label a:hover {
+    color: rgb(146, 0, 0);
+    text-decoration: 3px underline dotted rgb(146, 0, 0);
+}
+
+.label::before{                                             /* indicator arrow when closed */
+    content: "\203A";
+    position: absolute;
+    transform: rotate(90deg);
+    right: 40%;
+    font-size: 2rem;
+}
+
+.contentBx.active .label::before{                           /* indicator arrow when opened*/
+    transform: rotate(-90deg);
+}
+
+#readmore_vfx, #readmore_3d { padding: 2rem; }
+
+
+/* --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- */
+
+.flexbox-item-1, .flexbox-item-2 {
+    padding: 3rem 0;
+    width: 100%;
+    height: 480px;
+}
+
+.flexbox-item-1 img, .flexbox-item-2 img {
+    margin-top: 2rem;
+    width: 40%;
+}
+
+.flexbox-item-1 h4, .flexbox-item-2 h4 {
+    padding-top: 2rem;
+    font-size: 3rem;
+    text-transform: none;
+    text-align: left;
+}
+
+.flexbox-item-1 img { float: right ; } 
+.flexbox-item-1 h4, .flexbox-item-1 p { float: left; width: 50%;}
+.flexbox-item-2 h4, .flexbox-item-2 p{ float: right; width: 50%;}
+.flexbox-item-2 img { float: left; }
+
+/* --- CONTACT --- CONTACT ---CONTACT ---CONTACT ---CONTACT ---CONTACT ---CONTACT ---CONTACT ---CONTACT ---CONTACT ---CONTACT ---CONTACT ---CONTACT ---CONTACT ---CONTACT --- */
+
+#contact {
+    min-height: 75vh;
+}
+
+#contact > div { display: block; }
+
+#contact .flex-container {
+    justify-content: center;
+}
+
+form input, textarea {
+    border: 2px rgb(26, 26, 26) solid;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-align: left;
+}
+
+
+#feed input { height: 40px; width: 40%; }
+#mail input { height: 40px; width: 80%; }
+textarea { height: 200px; width: 50%;}
+.input-text { padding-left: 1rem; width: 80%; }
+
+#submit input {
+    height: 40px;
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(0, 136, 169);
+    color: rgb(230, 230, 230);
+    border-radius: 50px;
+}
+
+#submit input:hover { background-color: rgb(146, 0, 0); }
+
+/* --- FOOTER --- FOOTER --- FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER --- */
+
+.flexbox-item-footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.flexbox-item-footer ul{ width: 50%; padding: 0 20%; }
+.flexbox-item-footer li { text-align: left; padding: .25rem 0; }
+.flexbox-item-footer i { font-size: 1.25rem; padding: 0 .5rem;}
+.flexbox-item-footer a { font-size: 1.25rem; color: rgb(230, 230, 230); }
+footer p {text-align: center; font-size: 1.5rem;}
+
+/* --- general-hover-styling --- general-hover-styling --- general-hover-styling --- general-hover-styling --- general-hover-styling --- general-hover-styling --- general-hover-styling --- */
+
+a:hover { color: rgb(0, 136, 169); }
+
+@media  screen and (max-width:1350px) {
+
+*{
+font-size: 12px;
+scroll-padding-top: var(--scroll-padding, 48px);
+}
+
+/* --- NAVIGATION --- NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION --- */
+
+#logo {
+    width: 10%;
+}
+
+/* --- according --- according --- according --- according --- according --- according --- according --- according --- according ---  */
+
+.content { min-height: 150vh; }
+
+.contentBx summary a{ font-size: 1.75rem; }                           /* read more font size */
+
+.label::before{                                             /* indicator arrow when closed */
+    right: 20%;
+    font-size: 2.5rem;
+}
+
+.contentBx.active .label::before{                           /* indicator arrow when opened*/
+    transform: rotate(-90deg);
+}
+
+/* --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- */
+
+.flexbox-item-1, .flexbox-item-2 {
+    height: 400px;
+}
+
+}
+
+@media  screen and (max-width:950px) {
+
+*{
+font-size: 12px;
+scroll-padding-top: var(--scroll-padding, 48px);
+}
+
+section {                                               
+    min-height: 50vh;                              
+}
+
+/* --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- */
+
+    h1{ font-size: 6rem; }
+    h2 { font-size: 3.5rem; }
+    h3 { font-size: 3rem;}
+
+/* --- NAVIGATION --- NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION --- */
+
+.navbar{
+    justify-content: space-around;
+    padding: 0.25rem 0;
+}
+
+#logo {
+    width: 15%;
+}
+
+.hamburger {
+    display: block;
+}
+
+
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 4rem;
+    gap:0;
+    flex-direction: column;
+    background-color: rgb(26, 26, 26);
+    width: 100%;
+    text-align: center;
+    transition: .3s;
+}
+
+.nav-menu.active{
+    left: 0;
+    min-height: 15rem;
+}
+
+.nav-item {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+/* --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- */
+
+header section {
+    min-height: 100vh;
+}
+
+/* --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- */
+/* --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings ---  */
+
+.flexbox-item-about { padding: 3rem 0; }
+.flexbox-item-about h4, .flexbox-item-about p { width: 100%; }
+
+.flexbox-item-about h4 { font-size: 3.25rem;}
+
+/* --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- */
+/* --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- */
+
+.carousel {
+    max-height: 360px ;
+}
+
+.slide model-viewer {                                   
+    height: 70%;
+    width: 80%;
+    margin: 0 10%;
+}
+
+.slide img {
+    height: 70%;
+    width: 80%;
+}
+
+.carousel-button.prev{ left: 0; font-size: 5rem; }
+.carousel-button.next{ right: 0; font-size: 5rem; }
+
+.info-icon {
+    right: 0;
+}
+
+.info-icon.active .tooltip-text { visibility: none; opacity: 0; }
+
+/* --- according --- according --- according --- according --- according --- according --- according --- according --- according ---  */
+
+.contentBx summary a{ font-size: 1.75rem; }                           /* read more font size */
+
+.label::before{                                             /* indicator arrow when closed */
+    right: 20%;
+    font-size: 2.5rem;
+}
+
+.contentBx.active .label::before{                           /* indicator arrow when opened*/
+    transform: rotate(-90deg);
+}
+
+/* --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- */
+
+.flexbox-item-1, .flexbox-item-2 {
+    height: auto;
+    padding: 1.5rem 0;
+}
+
+.flexbox-item-1 img, .flexbox-item-2 img {
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.flexbox-item-1 h4, .flexbox-item-2 h4 {
+    font-size: 2rem;
+}
+
+.flexbox-item-1 img { float: none ; } 
+.flexbox-item-1 h4, .flexbox-item-1 p { float: none; width: 100%;}
+.flexbox-item-2 h4, .flexbox-item-2 p{ float: none; width: 100%;}
+.flexbox-item-2 img { float: none; }
+
+
+/* --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- */
+
+#contact {
+    min-height: 50vh;
+}
+
+#submit input {
+    width: 40%;
+}
+
+/* --- FOOTER --- FOOTER --- FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER --- */
+
+footer {
+    min-height: 15vh;
+}
+
+.flexbox-item-footer {
+    padding: 2rem 2rem;
+}
+
+.flexbox-item-footer ul{ width: 50%; padding: 0 10%; }
+.flexbox-item-footer i, .flexbox-item-footer a{ padding: 0 0;}
+
+}
+
+
+@media  screen and (max-width:600px) {
+
+*{
+font-size: 10px;
+scroll-padding-top: var(--scroll-padding, 40px);
+}
+
+section {                                               
+    min-height: 50vh;                              
+}
+
+/* --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- font settings --- */
+
+    h1{ font-size: 6rem; }
+    h2 { font-size: 3.5rem; }
+    h3 { font-size: 3rem;}
+
+/* --- NAVIGATION --- NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION ---NAVIGATION --- */
+
+.navbar{
+    justify-content: space-around;
+    padding: 0.25rem 0;
+}
+
+#logo {
+    width: 15%;
+}
+
+.hamburger {
+    display: block;
+}
+
+
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 4rem;
+    gap:0;
+    flex-direction: column;
+    background-color: rgb(26, 26, 26);
+    width: 100%;
+    text-align: center;
+    transition: .3s;
+}
+
+.nav-menu.active{
+    left: 0;
+    min-height: 15rem;
+}
+
+.nav-item {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+/* --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- HOME --- */
+
+header section {
+    min-height: 100vh;
+}
+
+/* --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- */
+/* --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings ---  */
+
+.flexbox-item-about { padding: 3rem 0; }
+.flexbox-item-about h4, .flexbox-item-about p { width: 100%; }
+
+.flexbox-item-about h4 { font-size: 3.25rem;}
+
+/* --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- */
+/* --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- */
+
+.carousel {
+    max-height: 360px ;
+}
+
+.slide model-viewer {                                   
+    height: 70%;
+    width: 80%;
+    margin: 0 10%;
+}
+
+.slide img {
+    height: 70%;
+    width: 80%;
+}
+
+.carousel-button.prev{ left: 0; font-size: 5rem; }
+.carousel-button.next{ right: 0; font-size: 5rem; }
+
+.info-icon {
+    right: 0;
+}
+
+.info-icon.active .tooltip-text { visibility: none; opacity: 0; }
+
+/* --- according --- according --- according --- according --- according --- according --- according --- according --- according ---  */
+
+.contentBx summary a{ font-size: 1.75rem; }                           /* read more font size */
+
+.label::before{                                             /* indicator arrow when closed */
+    right: 20%;
+    font-size: 2.5rem;
+}
+
+.contentBx.active .label::before{                           /* indicator arrow when opened*/
+    transform: rotate(-90deg);
+}
+
+/* --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- flexbox-items --- */
+
+.flexbox-item-1, .flexbox-item-2 {
+    height: auto;
+    padding: 1.5rem 0;
+}
+
+.flexbox-item-1 img, .flexbox-item-2 img {
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.flexbox-item-1 h4, .flexbox-item-2 h4 {
+    font-size: 2rem;
+}
+
+.flexbox-item-1 img { float: none ; } 
+.flexbox-item-1 h4, .flexbox-item-1 p { float: none; width: 100%;}
+.flexbox-item-2 h4, .flexbox-item-2 p{ float: none; width: 100%;}
+.flexbox-item-2 img { float: none; }
+
+
+/* --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- CONTACT --- */
+
+#contact {
+    min-height: 50vh;
+}
+
+#submit input {
+    width: 40%;
+}
+
+/* --- FOOTER --- FOOTER --- FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER ---FOOTER --- */
+
+footer {
+    min-height: 15vh;
+}
+
+.flexbox-item-footer {
+    padding: 2rem 2rem;
+}
+
+.flexbox-item-footer ul{ width: 50%; padding: 0 10%; }
+.flexbox-item-footer i, .flexbox-item-footer a{ padding: 0 0;}
+
+}
