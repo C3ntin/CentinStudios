@@ -149,21 +149,28 @@ img {border-radius: 15px;}
 /* --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- ABOUT --- */
 /* --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings --- flexbox-item-settings ---  */
 
-#about {
-    background-image: url("bg\ img/AboutBG.png");
-    background-size: cover;  
-    min-height: 1080px;
-    align-items: center;
+.flexbox-item-about {
+    padding: 3rem 0;
+    width: 100%;
+    height: auto;
 }
 
-.flexbox-item-about { padding: 3rem 0; }
-.flexbox-item-about h4, .flexbox-item-about p { float: left; width: 50.01%; }
+.flexbox-item-about img {
+    width: 50%;
+}
 
 .flexbox-item-about h4 {
     padding: 3rem 0 2rem 0;
     font-size: 4rem;
     text-transform: none;
 }
+
+.flexbox-item-about img { float: right ; padding-left: 10%;} 
+.flexbox-item-about h4, .flexbox-item-about p { float: left; width: 50%;}
+.flexbox-item-about p {
+    padding-bottom: 1rem;
+}
+
 
 /* --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- */
 /* --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- */
@@ -518,6 +525,8 @@ header section {
 
 .flexbox-item-about h4 { font-size: 3.25rem;}
 
+.flexbox-item-about img { float: none ; padding-left: 0%;} 
+
 /* --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- */
 /* --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- */
 
@@ -686,6 +695,7 @@ header section {
 .flexbox-item-about h4, .flexbox-item-about p { width: 100%; }
 
 .flexbox-item-about h4 { font-size: 3.25rem;}
+.flexbox-item-about img { float: none ; padding-left: 0%;} 
 
 /* --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- CONTENT --- */
 /* --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- slider --- */
